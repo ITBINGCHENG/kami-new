@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="{% static 'css/index.css' %}" type="text/CSS" rel="stylesheet" />
+	<meta charset="UTF-8">
+	<title>卡密系统</title>
+</head>
+<body>
+	<nav>
+
+		<div class= "nav-top">
+			<h1 class="logo">
+				<a href="#" title="秋水逸冰">一江春水</a>
+			</h1>
+			<div class="nav-left">
+				<a href="#">主页</a>
+				<a href="#">文章</a>
+				<a href="#">关于</a>
+			</div>
+			<div class="nav-right">
+				{% if request.session.is_login %}
+					  <a href="#">当前在线：{{ request.session.user_name }}</a>
+					  <a href="/logout/">登出</a>
+				  {% else %}
+						<a href="/login">登录</a>
+						<a href="#">注册</a>
+				  {% endif %}
+			</div>
+		</div>
+		
+	</nav>
+	
+
+{% block content %}
+    {% if request.session.is_login %}
+    <h1>你好,{{ request.session.user_name }}！欢迎回来！</h1>
+    {% else %}
+    <h1>你尚未登录，如要提取卡密请先登录！</h1>
+    {% endif %}
+{% endblock %}
+
+
+</body>
+</html>

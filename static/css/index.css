@@ -1,0 +1,93 @@
+* {
+    padding:0;
+    margin: 0;
+}
+
+nav{
+    height: 60px;
+    background-color: #FCFCFC;
+    border-top: 3px solid #FF8500; /*上边框*/
+    border-bottom: 1px solid #EDEEF0; /*下边框*/
+
+}
+nav a {
+    font-size: 12px;
+    color:#4C4C4C;
+    text-decoration: none;
+    /*width: 100px;*/
+    height:60px;
+    display: inline-block;/*a为行内元素*/
+    padding: 0 15px; /*上下0 左右15*/
+    line-height: 60px;	/*行高等于高度文字可居中*/
+
+}
+nav div div a:hover{
+    background-color: #eee;
+    color: #ff8400;
+
+}
+.nav-top {
+    max-width: 1320px;	/*导航栏内容盒宽度*/
+    margin: 0 auto; /*块级元素外边距上下设置后 左右auto 盒子居中对齐(行内块不行*/
+
+}
+.logo {
+    float: left;
+    height: 60px;
+    width: 230px;
+    background: url(../images/logo.png) no-repeat;
+    background-color: #fff;
+}
+.logo a {
+    overflow: hidden;	/* overflow 溢出
+检索或设置当对象的内容超过其指定高度及宽度时如何管理内容。*/
+    line-height: 300px;	/*设置行号要高使文字超过盒子宽度以致溢出*/
+    width: 230px;
+}
+.nav-left {
+    float: left;	/*设置浮动*/
+
+}
+.nav-right {
+    float: right;
+}
+.container, .footer {
+    max-width: 1320px;
+    min-width: 320px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+    *zoom: 1;
+}
+.content-wrap {
+    width: 100%;
+    float: left;
+}
+.content {
+    margin-right: 370px;
+}
+.excerpt {
+    background-color: #fff;
+    padding: 20px 20px 20px 256px;
+    margin-bottom: 1px;
+    position: relative;
+    border-left: solid 4px #fff;
+    zoom: 1;
+}
+.excerpt .focus {
+    float: left;
+    width: 220px;
+    margin-left: -240px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: table;
+}
+h1 {
+    text-align: center;
+    color: #2b2b36;
+    font-size: 3em;
+    font-weight: 200;
+    padding-top: 40px;
+}
+
